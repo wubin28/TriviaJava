@@ -21,7 +21,7 @@ public class GameTest {
 
         // When
         // Then
-        game.add("Chet");
+        game.addPlayer("Chet");
 
         // 1
         game.roll(4);

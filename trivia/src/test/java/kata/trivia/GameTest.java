@@ -16,6 +16,10 @@ public class GameTest {
 
     @Test
     public void characterizingMethod_wasCorrectlyAnswered() {
+        // Given
+        Game game = new Game();
+        // When
+        // Then
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
     }
 }

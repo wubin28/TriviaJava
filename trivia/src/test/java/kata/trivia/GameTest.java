@@ -18,7 +18,14 @@ public class GameTest {
     public void characterizingMethod_wasCorrectlyAnswered() {
         // Given
         Game game = new Game();
+
         // When
+        game.add("Chet");
+        game.add("Pat");
+        game.add("Sue");
+
+        game.roll(4);
+
         // Then
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
     }

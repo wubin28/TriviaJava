@@ -19,3 +19,8 @@ Drive the refactoring of the productive code by the updated test above.
 ================
 Behaviours observed from the characterization tests
 * When a player has got 6 gold coins, the game should be over.
+* Add a player to the game.
+* Make a roll
+* Answer a question
+* Check if the game is over
+

@@ -25,8 +25,8 @@ public class GameTest {
 
         for (int i = 0; i < 5; i++) {
             game.roll(4);
-            assertEquals("Failure - ", true, game.isNotOver());
+            assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
         }
-        assertEquals("Failure - ", false, game.isNotOver());
+        assertEquals("Failure - ", false, game.wasCorrectlyAnswered());
     }
 }

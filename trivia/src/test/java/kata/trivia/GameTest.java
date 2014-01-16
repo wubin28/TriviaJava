@@ -15,7 +15,7 @@ import static junit.framework.TestCase.assertEquals;
 public class GameTest {
 
     @Test
-    public void characterizingMethod_wasCorrectlyAnswered() {
+    public void WHEN_APlayerGotSixGoldCoins_THEN_GameIsOver() {
         // Given
         Game game = new Game();
 

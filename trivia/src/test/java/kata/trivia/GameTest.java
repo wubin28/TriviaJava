@@ -25,26 +25,26 @@ public class GameTest {
 
         // 1
         game.roll(4);
-        assertEquals("Failure - ", false, game.isNotOver());
+        assertEquals("Failure - ", true, game.isNotOver());
 
         // 2
         game.roll(4);
-        assertEquals("Failure - ", false, game.isNotOver());
+        assertEquals("Failure - ", true, game.isNotOver());
 
         // 3
         game.roll(4);
-        assertEquals("Failure - ", false, game.isNotOver());
+        assertEquals("Failure - ", true, game.isNotOver());
 
         // 4
         game.roll(4);
-        assertEquals("Failure - ", false, game.isNotOver());
+        assertEquals("Failure - ", true, game.isNotOver());
 
         // 5
         game.roll(4);
-        assertEquals("Failure - ", false, game.isNotOver());
+        assertEquals("Failure - ", true, game.isNotOver());
 
         // 6
         game.roll(4);
-        assertEquals("Failure - ", true, game.isNotOver());
+        assertEquals("Failure - ", false, game.isNotOver());
     }
 }

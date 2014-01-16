@@ -123,11 +123,11 @@ public class Game
                         + purses[currentPlayer]
                         + " Gold Coins.");
 
-                boolean playerWon = playerNotWonYet();
+                boolean playerNotWon = playerNotWonYet();
                 currentPlayer++;
                 if (currentPlayer == players.size()) currentPlayer = 0;
 
-                return playerWon;
+                return playerNotWon;
             } else {
                 currentPlayer++;
                 if (currentPlayer == players.size()) currentPlayer = 0;
@@ -145,11 +145,11 @@ public class Game
                     + purses[currentPlayer]
                     + " Gold Coins.");
 
-            boolean playerWon = playerNotWonYet();
+            boolean playerNotWon = playerNotWonYet();
             currentPlayer++;
             if (currentPlayer == players.size()) currentPlayer = 0;
 
-            return playerWon;
+            return playerNotWon;
         }
     }
 

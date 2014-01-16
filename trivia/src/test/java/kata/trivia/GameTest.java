@@ -15,7 +15,7 @@ import static junit.framework.TestCase.assertEquals;
 public class GameTest {
 
     @Test
-    public void testOneisOne() {
-        assertEquals("Failure - ", 1, 2-1);
+    public void characterizingMethod_wasCorrectlyAnswered() {
+        assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
     }
 }

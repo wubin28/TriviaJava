@@ -30,7 +30,6 @@ public class GameTest {
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
-        assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
-        assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
+        assertEquals("Failure - ", false, game.wasCorrectlyAnswered());
     }
 }

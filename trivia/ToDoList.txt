@@ -16,3 +16,6 @@ Drive the refactoring of the productive code by the updated test above.
   "Answer was corrent..." should be "Answer was correct...".
   Rename method wasCorrectlyAnswered() to be isGameOver().
 
+================
+Behaviours observed from the characterization tests
+* When a player has got 6 gold coins, the game should be over.

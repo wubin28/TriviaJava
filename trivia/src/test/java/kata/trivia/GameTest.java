@@ -23,28 +23,10 @@ public class GameTest {
         // Then
         game.addPlayer("Chet");
 
-        // 1
-        game.roll(4);
-        assertEquals("Failure - ", true, game.isNotOver());
-
-        // 2
-        game.roll(4);
-        assertEquals("Failure - ", true, game.isNotOver());
-
-        // 3
-        game.roll(4);
-        assertEquals("Failure - ", true, game.isNotOver());
-
-        // 4
-        game.roll(4);
-        assertEquals("Failure - ", true, game.isNotOver());
-
-        // 5
-        game.roll(4);
-        assertEquals("Failure - ", true, game.isNotOver());
-
-        // 6
-        game.roll(4);
+        for (int i = 0; i < 5; i++) {
+            game.roll(4);
+            assertEquals("Failure - ", true, game.isNotOver());
+        }
         assertEquals("Failure - ", false, game.isNotOver());
     }
 }

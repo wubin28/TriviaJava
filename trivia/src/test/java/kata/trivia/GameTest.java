@@ -21,8 +21,6 @@ public class GameTest {
 
         // When
         game.add("Chet");
-        game.add("Pat");
-        game.add("Sue");
 
         game.roll(4);
 

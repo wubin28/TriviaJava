@@ -27,7 +27,7 @@ public class GameRunner {
             if (rand.nextInt(9) == 7) {
                 notAWinner = aGame.wrongAnswer();
             } else {
-                notAWinner = aGame.isOver();
+                notAWinner = aGame.isNotOver();
             }
 
 

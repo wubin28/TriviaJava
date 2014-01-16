@@ -1,9 +1,27 @@
 Done: Find all public methods of the class Game.
-Done: Find all public methods called by the client GameRunner.
+Done: Find all public methods called by the client GameRunner and understand the behaviours of them by reading the code.
   Game.add()
+    Add the player.
+    Initialize place, purse, and inPenaltyBox for this player.
   Game.roll()
+    Determine if the current player will get out of the penalty box according to the number of the roll.
+    Determine the place of the current player.
+    Determine the category of the question according to the value of the place of the current player.
+    Ask a question.
   Game.wrongAnswer()
+    Send the current player to a penalty box.
+    Determine the next player.
+    Continue the game.
   Game.wasCorrectlyAnswered()
+    Present a gold coin to the current player due to answering the question correctly.
+    Determine the next player.
+    Determine if continue the game.
+  GameRunner.main()
+    Add 3 players to the game.
+    If the game is not over, do the following repeatedly.
+      If the current player is not lucky, call method wrongAnswer() and buffer the status if we continue the game.
+      If the current player is lucky, call method wasCorrectlyAnswered() and buffer the status if we continue the game.
+
 Done: Draw the effect sketches of the public methods above to find out all the variables and methods which effect the return values of these public methods.
 
 Write a characterization test for the pinch point in the effect sketches above. Need not mention the intents of the test in the name of the test. And write a blank expected values in the characterization test. Since those are what the characterization test is supposed to do.
@@ -15,12 +33,4 @@ Drive the refactoring of the productive code by the updated test above.
   "They are player ..." should be "There are player ...".
   "Answer was corrent..." should be "Answer was correct...".
   Rename method wasCorrectlyAnswered() to be isGameOver().
-
-================
-Behaviours observed from the characterization tests
-* When a player has got 6 gold coins, the game should be over.
-* Add a player to the game.
-* Make a roll
-* Answer a question
-* Check if the game is over
 

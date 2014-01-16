@@ -20,16 +20,31 @@ public class GameTest {
         Game game = new Game();
 
         // When
+        // Then
         game.add("Chet");
 
+        // 1
         game.roll(4);
+        assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
 
-        // Then
+        // 2
+        game.roll(4);
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
+
+        // 3
+        game.roll(4);
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
+
+        // 4
+        game.roll(4);
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
+
+        // 5
+        game.roll(4);
         assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
-        assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
+
+        // 6
+        game.roll(4);
         assertEquals("Failure - ", false, game.wasCorrectlyAnswered());
     }
 }

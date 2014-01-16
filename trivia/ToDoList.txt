@@ -1,0 +1,18 @@
+Done: Find all public methods of the class Game.
+Done: Find all public methods called by the client GameRunner.
+  Game.add()
+  Game.roll()
+  Game.wrongAnswer()
+  Game.wasCorrectlyAnswered()
+Done: Draw the effect sketches of the public methods above to find out all the variables and methods which effect the return values of these public methods.
+
+Write a characterization test for the pinch point in the effect sketches above. Need not mention the intents of the test in the name of the test. And write a blank expected values in the characterization test. Since those are what the characterization test is supposed to do.
+After the characterization test fails, get the actual value from the error message of the test. Use the actual value as the expected value and update the characterization test accordingly and make the test pass.
+Update the name of the characterization test with the intents of the test.
+Update the test code to reflect the expected activity.
+Drive the refactoring of the productive code by the updated test above.
+  Break the class Game down into several classes according to responsibilities
+  "They are player ..." should be "There are player ...".
+  "Answer was corrent..." should be "Answer was correct...".
+  Rename method wasCorrectlyAnswered() to be isGameOver().
+

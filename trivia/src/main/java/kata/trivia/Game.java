@@ -165,6 +165,6 @@ public class Game
 
 
     private boolean didPlayerWin() {
-        return !(purses[currentPlayer] == 6);
+        return purses[currentPlayer] == 6;
     }
 }

@@ -43,7 +43,7 @@ public class GameTest {
         // Then
         game.roll(4);
         game.wasCorrectlyAnswered();
-        assertEquals("Failure - the current player is actually Pat.", "Pat", game.players.get(game.currentPlayer));
+        assertEquals("Failure - the current player is actually Pat.", "Pat", game.getNameOfCurrentPlayer());
 
         game.roll(4);
         game.wasCorrectlyAnswered();

@@ -43,15 +43,15 @@ public class GameTest {
         // Then
         game.roll(4);
         game.wasCorrectlyAnswered();
-        assertEquals("Failure - the current player should be Chet.", "", game.players.get(game.currentPlayer));
+        assertEquals("Failure - the current player is actually Pat.", "Pat", game.players.get(game.currentPlayer));
 
         game.roll(4);
         game.wasCorrectlyAnswered();
-        assertEquals("Failure - the current player should be Pat.", "", game.players.get(game.currentPlayer));
+        assertEquals("Failure - the current player is actually Sue.", "Sue", game.players.get(game.currentPlayer));
 
         game.roll(4);
         game.wasCorrectlyAnswered();
-        assertEquals("Failure - the current player should be Sue.", "", game.players.get(game.currentPlayer));
+        assertEquals("Failure - the current player is actually Chet.", "Chet", game.players.get(game.currentPlayer));
 
     }
 }

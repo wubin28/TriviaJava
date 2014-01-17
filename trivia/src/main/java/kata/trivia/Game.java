@@ -167,4 +167,8 @@ public class Game
     private boolean playerNotWonYet() {
         return !(purses[currentPlayer] == 6);
     }
+
+    public String getNameOfCurrentPlayer() {
+        return (String)players.get(currentPlayer);
+    }
 }

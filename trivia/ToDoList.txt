@@ -1,5 +1,5 @@
 Done: Find all public methods of the class Game.
-Done: Find all public methods called by the client GameRunner and understand the behaviours of them by reading the code.
+Done: Find all public methods of class Game called by the client GameRunner and understand the behaviours of them by reading the code.
   Game.add()
     Add the player.
     Initialize place, purse, and inPenaltyBox for this player.
@@ -21,7 +21,13 @@ Done: Find all public methods called by the client GameRunner and understand the
     If the game is not over, do the following repeatedly.
       If the current player is not lucky, call method wrongAnswer() and buffer the status if we continue the game.
       If the current player is lucky, call method wasCorrectlyAnswered() and buffer the status if we continue the game.
-
+Find all pieces of the major logic which are not going to be modified from the running of the client and the code of the methods above and write characterization tests for all of them.
+  The order in which the players roll the dice is the same as the order in which they are added to the game.
+  Present a gold coin if the current player answers the question correctly.
+  Send to the penalty box and cannot answer a question if the current player answers the question wrong.
+  If the current player is in the penalty box and the number of dice-rolling of this player is divisible by 2, the player cannot get out of the penalty box and cannot answer a question.
+  If the current player is in the penalty box and the number of dice-rolling of this player cannot be divisible by 2, the player will get out of the penalty box and can answer a question.
+  The game will be over if as soon as any player gets 6 gold coins.
 Done: Draw the effect sketches of the public methods above to find out all the variables and methods which effect the return values of these public methods.
 
 Write a characterization test for the pinch point in the effect sketches above. Need not mention the intents of the test in the name of the test. And write a blank expected values in the characterization test. Since those are what the characterization test is supposed to do.

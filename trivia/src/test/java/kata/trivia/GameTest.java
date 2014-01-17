@@ -29,4 +29,29 @@ public class GameTest {
         }
         assertEquals("Failure - ", false, game.wasCorrectlyAnswered());
     }
+
+    @Test
+    public void WHEN_AddPlayersOneByOne_THEN_RollDiceInTheSameOrder() {
+        // Given
+        Game game = new Game();
+
+        // When
+        game.addPlayer("Chet");
+        game.addPlayer("Pat");
+        game.addPlayer("Sue");
+
+        // Then
+        game.roll(4);
+        game.wasCorrectlyAnswered();
+        assertEquals("Failure - the current player should be Chet.", "", game.players.get(game.currentPlayer));
+
+        game.roll(4);
+        game.wasCorrectlyAnswered();
+        assertEquals("Failure - the current player should be Pat.", "", game.players.get(game.currentPlayer));
+
+        game.roll(4);
+        game.wasCorrectlyAnswered();
+        assertEquals("Failure - the current player should be Sue.", "", game.players.get(game.currentPlayer));
+
+    }
 }

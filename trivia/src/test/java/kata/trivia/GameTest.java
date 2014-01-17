@@ -31,7 +31,7 @@ public class GameTest {
     }
 
     @Test
-    public void WHEN_AddPlayersOneByOne_THEN_RollDiceInTheSameOrder() {
+    public void WHEN_AddPlayersOneByOne_THEN_RollDiceInTheSameOrderButStartingFromTheSecondPlayer() {
         // Given
         Game game = new Game();
 
@@ -41,6 +41,18 @@ public class GameTest {
         game.addPlayer("Sue");
 
         // Then
+        game.roll(4);
+        game.wasCorrectlyAnswered();
+        assertEquals("Failure - the current player is actually Pat.", "Pat", game.players.get(game.currentPlayer));
+
+        game.roll(4);
+        game.wasCorrectlyAnswered();
+        assertEquals("Failure - the current player is actually Sue.", "Sue", game.players.get(game.currentPlayer));
+
+        game.roll(4);
+        game.wasCorrectlyAnswered();
+        assertEquals("Failure - the current player is actually Chet.", "Chet", game.players.get(game.currentPlayer));
+
         game.roll(4);
         game.wasCorrectlyAnswered();
         assertEquals("Failure - the current player is actually Pat.", "Pat", game.players.get(game.currentPlayer));

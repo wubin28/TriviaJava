@@ -23,7 +23,7 @@ Done: Find all public methods of class Game called by the client GameRunner and 
       If the current player is lucky, call method wasCorrectlyAnswered() and buffer the status if we continue the game.
 Find all pieces of the major logic which are not going to be modified from the running of the client and the code of the methods above and write characterization tests for all of them.
   Done: The order in which the players roll the dice is the same as the order in which they are added to the game.
-  Present a gold coin if the current player answers the question correctly.
+  Done: Present a gold coin if the current player answers the question correctly.
   Send to the penalty box and cannot answer a question if the current player answers the question wrong.
   If the current player is in the penalty box and the number of dice-rolling of this player is divisible by 2, the player cannot get out of the penalty box and cannot answer a question.
   If the current player is in the penalty box and the number of dice-rolling of this player cannot be divisible by 2, the player will get out of the penalty box and can answer a question.

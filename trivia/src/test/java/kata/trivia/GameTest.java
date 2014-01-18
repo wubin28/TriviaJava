@@ -69,9 +69,9 @@ public class GameTest {
         // Then
         game.roll(4);
         game.wasCorrectlyAnswered();
-        assertEquals("Failure - should win 1 gold coin.", 1, game.purses[game.currentPlayer]);
+        assertEquals("Failure - should win 1 gold coin.", 1, game.getNumberOfGoldCoinsOfCurrentPlayer());
         game.roll(4);
         game.wasCorrectlyAnswered();
-        assertEquals("Failure - should win 2 gold coins.", 2, game.purses[game.currentPlayer]);
+        assertEquals("Failure - should win 2 gold coins.", 2, game.getNumberOfGoldCoinsOfCurrentPlayer());
     }
 }

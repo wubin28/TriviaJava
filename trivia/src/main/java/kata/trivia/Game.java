@@ -7,7 +7,7 @@ public class Game
 {
     private ArrayList players = new ArrayList();
     int[] places = new int[6];
-    int[] purses  = new int[6];
+    private int[] purses  = new int[6];
     boolean[] inPenaltyBox  = new boolean[6];
 
     LinkedList popQuestions = new LinkedList();
@@ -15,7 +15,7 @@ public class Game
     LinkedList sportsQuestions = new LinkedList();
     LinkedList rockQuestions = new LinkedList();
 
-    int currentPlayer = 0;
+    private int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
 
     public  Game(){
@@ -170,5 +170,9 @@ public class Game
 
     public String getNameOfCurrentPlayer() {
         return (String)players.get(currentPlayer);
+    }
+
+    public int getNumberOfGoldCoinsOfCurrentPlayer() {
+        return purses[currentPlayer];
     }
 }

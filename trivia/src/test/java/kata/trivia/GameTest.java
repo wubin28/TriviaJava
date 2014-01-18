@@ -66,4 +66,18 @@ public class GameTest {
         assertEquals("Failure - the current player is actually Chet.", "Chet", game.getNameOfCurrentPlayer());
 
     }
+
+    @Test
+    public void WHEN_CurrentPlayerAnswersQuestionCorrectly_THEN_PresentAGoldCoin() {
+        // Given
+        Game game = new Game();
+
+        // When
+        game.addPlayer("Chet");
+
+        // Then
+        game.roll(4);
+        game.wasCorrectlyAnswered();
+        assertEquals("Failure - ", 0, game.purses[game.currentPlayer]);
+    }
 }

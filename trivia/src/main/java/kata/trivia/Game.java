@@ -15,7 +15,7 @@ public class Game
     LinkedList sportsQuestions = new LinkedList();
     LinkedList rockQuestions = new LinkedList();
 
-    private int currentPlayer = 0;
+    int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
 
     public  Game(){

@@ -77,6 +77,13 @@ public class GameTest {
 
     @Test
     public void WHEN_CurrentPlayerAnswersQuestionWrong_THEN_SendToPenaltyBoxAndCannotAnswerAQuestion() {
+
+        // When
+        game.addPlayer("Chet");
+
+        // Then
+        game.roll(4);
+        game.wrongAnswer();
         assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
     }
 }

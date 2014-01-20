@@ -74,4 +74,9 @@ public class GameTest {
         game.wasCorrectlyAnswered();
         assertEquals("Failure - should win 2 gold coins.", 2, game.getNumberOfGoldCoinsOfCurrentPlayer());
     }
+
+    @Test
+    public void WHEN_CurrentPlayerAnswersQuestionWrong_THEN_SendToPenaltyBoxAndCannotAnswerAQuestion() {
+        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
+    }
 }

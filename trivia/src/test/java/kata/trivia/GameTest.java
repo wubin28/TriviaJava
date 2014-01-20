@@ -77,6 +77,8 @@ public class GameTest {
 
     @Test
     public void WHEN_CurrentPlayerAnswersQuestionWrong_THEN_SendToPenaltyBoxAndCannotAnswerAQuestion() {
+        // Given
+        Game game = new Game();
 
         // When
         game.addPlayer("Chet");

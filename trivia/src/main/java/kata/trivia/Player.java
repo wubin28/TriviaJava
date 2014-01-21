@@ -21,7 +21,9 @@ public class Player {
 
     public void moveForward(int numberOfSteps) {
         this.place += numberOfSteps;
-        if (this.place > 11) this.place -= 12;
+        if (this.place > 11) {
+            this.place -= 12;
+        }
     }
 
     public int getPlace() {

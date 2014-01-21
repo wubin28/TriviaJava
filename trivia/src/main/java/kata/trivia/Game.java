@@ -82,12 +82,16 @@ public class Game
 
                 boolean playerNotWon = playerNotWonYet();
                 currentPlayer++;
-                if (currentPlayer == players.size()) currentPlayer = 0;
+                if (currentPlayer == players.size()) {
+                    currentPlayer = 0;
+                }
 
                 return playerNotWon;
             } else {
                 currentPlayer++;
-                if (currentPlayer == players.size()) currentPlayer = 0;
+                if (currentPlayer == players.size()) {
+                    currentPlayer = 0;
+                }
                 return true;
             }
 
@@ -104,7 +108,9 @@ public class Game
 
             boolean playerNotWon = playerNotWonYet();
             currentPlayer++;
-            if (currentPlayer == players.size()) currentPlayer = 0;
+            if (currentPlayer == players.size()) {
+                currentPlayer = 0;
+            }
 
             return playerNotWon;
         }
@@ -116,7 +122,9 @@ public class Game
         inPenaltyBox[currentPlayer] = true;
 
         currentPlayer++;
-        if (currentPlayer == players.size()) currentPlayer = 0;
+        if (currentPlayer == players.size()) {
+            currentPlayer = 0;
+        }
         return true;
     }
 

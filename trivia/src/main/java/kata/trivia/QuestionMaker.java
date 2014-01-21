@@ -37,26 +37,30 @@ public class QuestionMaker {
     }
 
     void askQuestion(Player currentPlayer) {
-        if (currentCategory(currentPlayer) == "Pop")
+        if (currentCategory(currentPlayer) == "Pop") {
             MyLogger.log((String)getPopQuestions().removeFirst());
-        if (currentCategory(currentPlayer) == "Science")
+        }
+        if (currentCategory(currentPlayer) == "Science") {
             MyLogger.log((String)getScienceQuestions().removeFirst());
-        if (currentCategory(currentPlayer) == "Sports")
+        }
+        if (currentCategory(currentPlayer) == "Sports") {
             MyLogger.log((String)getSportsQuestions().removeFirst());
-        if (currentCategory(currentPlayer) == "Rock")
+        }
+        if (currentCategory(currentPlayer) == "Rock") {
             MyLogger.log((String)getRockQuestions().removeFirst());
+        }
     }
 
     String currentCategory(Player currentPlayer) {
-        if (currentPlayer.getPlace() == 0) return "Pop";
-        if (currentPlayer.getPlace() == 4) return "Pop";
-        if (currentPlayer.getPlace() == 8) return "Pop";
-        if (currentPlayer.getPlace() == 1) return "Science";
-        if (currentPlayer.getPlace() == 5) return "Science";
-        if (currentPlayer.getPlace() == 9) return "Science";
-        if (currentPlayer.getPlace() == 2) return "Sports";
-        if (currentPlayer.getPlace() == 6) return "Sports";
-        if (currentPlayer.getPlace() == 10) return "Sports";
+        if (currentPlayer.getPlace() == 0) { return "Pop";}
+        if (currentPlayer.getPlace() == 4) {return "Pop";}
+        if (currentPlayer.getPlace() == 8) {return "Pop";}
+        if (currentPlayer.getPlace() == 1) {return "Science";}
+        if (currentPlayer.getPlace() == 5) {return "Science";}
+        if (currentPlayer.getPlace() == 9) {return "Science";}
+        if (currentPlayer.getPlace() == 2) {return "Sports";}
+        if (currentPlayer.getPlace() == 6) {return "Sports";}
+        if (currentPlayer.getPlace() == 10) {return "Sports";}
         return "Rock";
     }
 }

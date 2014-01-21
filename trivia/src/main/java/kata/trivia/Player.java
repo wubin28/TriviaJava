@@ -32,19 +32,27 @@ public class Player {
         return this.place;
     }
 
-    public void processPenaltyBoxAndMovingForwardAndBeingAskedQuestion(int diceRollingNumber) {
+    public void processPenaltyBoxAndMovingForward(int diceRollingNumber) {
         if (inPenaltyBox) {
             if (diceRollingNumber % 2 != 0) {
                 isGettingOutOfPenaltyBox = true;
-                MyLogger.log(players.get(currentPlayer).getName() + " is getting out of the penalty box");
+                MyLogger.log(this.name + " is getting out of the penalty box");
 
-                currentPlayerMovedForwardAndBeingAskedQuestion(diceRollingNumber);
+                currentPlayerMovedForward(diceRollingNumber);
             } else {
-                MyLogger.log(players.get(currentPlayer).getName() + " is not getting out of the penalty box");
+                MyLogger.log(this.name + " is not getting out of the penalty box");
                 isGettingOutOfPenaltyBox = false;
             }
         } else {
-            currentPlayerMovedForwardAndBeingAskedQuestion(diceRollingNumber);
+            currentPlayerMovedForward(diceRollingNumber);
         }
     }
+
+    private void currentPlayerMovedForward(int roll) {
+        moveForward(roll);
+        MyLogger.log(this.name
+                + "'s new location is "
+                + this.place);
+    }
+
 }

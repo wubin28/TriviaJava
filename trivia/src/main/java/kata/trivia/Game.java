@@ -35,18 +35,12 @@ public class Game
         MyLogger.log(players.get(currentPlayer).getName() + " is the current player");
         MyLogger.log("They have rolled a " + diceRollingNumber);
 
-        processPenaltyBoxAndMovingForwardAndBeingAskedQuestion(diceRollingNumber);
-    }
+        players.get(currentPlayer).processPenaltyBoxAndMovingForward(diceRollingNumber);
 
-
-    private void currentPlayerMovedForwardAndBeingAskedQuestion(int roll) {
-        players.get(currentPlayer).moveForward(roll);
-        MyLogger.log(players.get(currentPlayer).getName()
-                + "'s new location is "
-                + players.get(currentPlayer).getPlace());
         MyLogger.log("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
         questionMaker.askQuestion(players.get(currentPlayer));
     }
+
 
     public boolean wasCorrectlyAnswered() {
         if (inPenaltyBox[currentPlayer]){

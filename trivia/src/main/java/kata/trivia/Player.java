@@ -13,4 +13,8 @@ public class Player {
     public Player(String playerName) {
         this.playerName = playerName;
     }
+
+    public String getName() {
+        return this.playerName;
+    }
 }

@@ -3,6 +3,7 @@ Done: Find all public methods of class Game called by the client GameRunner and 
   GameRunner.main()
     Add 3 players to the game.
     If the game is not over, do the following repeatedly.
+      Roll a dice and call method roll().
       If the current player is not lucky, call method wrongAnswer() and buffer the status if we continue the game.
       If the current player is lucky, call method wasCorrectlyAnswered() and buffer the status if we continue the game.
   Game.add()
@@ -50,10 +51,24 @@ Done: Find all pieces of the major logic which are not going to be modified from
     Game.wasCorrectlyAnswered()
 Done: Check the test code and make the access modifiers of all fields of the Game class to be private.
 Done: List all public method names for each major logic above.
-Review and update all public method names of class Game according to the lists of the behaviors of these methods.
+Find all the nouns from the descriptions of all the major logic and use them to be the candidates of classes
+  * Game
+    * Game Board
+      * Penalty Box
+    * Player
+      * Purse
+    * Dice
+    * Gold Coin
+    * QuestionMaker
+      * Question
 
-
-=====================
+==============
+Design patterns
+* Observer
+* State
+* Strategy
+* Chain of Responsibility
+===============
 Done: Draw the effect sketches of the public methods above to find out all the variables and methods which effect the return values of these public methods.
 
 Write a characterization test for the pinch point in the effect sketches above. Need not mention the intents of the test in the name of the test. And write a blank expected values in the characterization test. Since those are what the characterization test is supposed to do.

@@ -8,6 +8,9 @@ package kata.trivia;
  * To change this template use File | Settings | File Templates.
  */
 public class MyLogger {
+    private MyLogger() {
+
+    }
     public static void log(String message) {
         System.out.println(message);
     }

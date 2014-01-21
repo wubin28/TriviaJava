@@ -50,6 +50,7 @@ Done: Find all pieces of the major logic which are not going to be modified from
     Game.roll()
     Game.wasCorrectlyAnswered()
 Done: List all public method names for each major logic above.
+Use Sonar to fix all Major and more severe issues.
 Eliminate all duplicated code.
 Find all the nouns from the descriptions of all the major logic and use them to be the candidates of classes
   * Game

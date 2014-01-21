@@ -19,7 +19,6 @@ public class Game
 
     public void addPlayer(String playerName) {
         players.add(new Player(playerName));
-        purses[howManyPlayers()] = 0;
 
         MyLogger.log(playerName + " was added");
         MyLogger.log("They are player number " + players.size());
@@ -56,6 +55,7 @@ public class Game
 
     private void currentPlayerWinsAGoldCoin() {
         MyLogger.log("Answer was correct!!!!");
+        players.get(currentPlayer).winAGoldCoin();
         purses[currentPlayer]++;
         MyLogger.log(players.get(currentPlayer).getName()
                 + " now has "

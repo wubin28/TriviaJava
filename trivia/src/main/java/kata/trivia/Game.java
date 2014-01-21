@@ -52,18 +52,10 @@ public class Game
         if (players.get(currentPlayer).isInPenaltyBox()){
             if (players.get(currentPlayer).isGettingOutOfPenaltyBox()) {
                 currentPlayerWinsAGoldCoin();
-
                 gameNotOver = playerNotWonYet();
             }
         } else {
-
-            MyLogger.log("Answer was corrent!!!!");
-            purses[currentPlayer]++;
-            MyLogger.log(players.get(currentPlayer).getName()
-                    + " now has "
-                    + purses[currentPlayer]
-                    + " Gold Coins.");
-
+            currentPlayerWinsAGoldCoin();
             gameNotOver = playerNotWonYet();
         }
         nextPlayer();

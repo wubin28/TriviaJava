@@ -20,16 +20,13 @@ public class Game
         return (howManyPlayers() >= 2);
     }
 
-    public boolean addPlayer(String playerName) {
-
-
+    public void addPlayer(String playerName) {
         players.add(new Player(playerName));
         purses[howManyPlayers()] = 0;
         inPenaltyBox[howManyPlayers()] = false;
 
         MyLogger.log(playerName + " was added");
         MyLogger.log("They are player number " + players.size());
-        return true;
     }
 
     public int howManyPlayers() {

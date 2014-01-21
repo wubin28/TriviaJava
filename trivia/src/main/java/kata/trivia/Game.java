@@ -128,10 +128,12 @@ public class Game
 
     public boolean processQuestionAnswering(int randomNumber) {
         boolean gameNotOver = true;
-        if (randomNumber == 7) {
-            gameNotOver = wrongAnswer();
-        } else {
-            gameNotOver = wasCorrectlyAnswered();
+        if (!currentPlayerIsInPenaltyBoxAndNotGettingOutOfIt()) {
+            if (randomNumber == 7) {
+                gameNotOver = wrongAnswer();
+            } else {
+                gameNotOver = wasCorrectlyAnswered();
+            }
         }
         return gameNotOver;
     }

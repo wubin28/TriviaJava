@@ -31,4 +31,8 @@ public class QuestionMaker {
     public LinkedList getRockQuestions() {
         return rockQuestions;
     }
+
+    public String createRockQuestion(int index){
+        return "Rock Question " + index;
+    }
 }

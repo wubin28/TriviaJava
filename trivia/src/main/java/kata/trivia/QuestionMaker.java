@@ -37,17 +37,17 @@ public class QuestionMaker {
     }
 
     void askQuestion(Game game) {
-        if (currentCategory(game) == "Pop")
+        if (currentCategory(game, null) == "Pop")
             System.out.println(getPopQuestions().removeFirst());
-        if (currentCategory(game) == "Science")
+        if (currentCategory(game, null) == "Science")
             System.out.println(getScienceQuestions().removeFirst());
-        if (currentCategory(game) == "Sports")
+        if (currentCategory(game, null) == "Sports")
             System.out.println(getSportsQuestions().removeFirst());
-        if (currentCategory(game) == "Rock")
+        if (currentCategory(game, null) == "Rock")
             System.out.println(getRockQuestions().removeFirst());
     }
 
-    String currentCategory(Game game) {
+    String currentCategory(Game game, Player currentPlayer) {
         if (currentPlayer.getPlace() == 0) return "Pop";
         if (game.places[game.currentPlayer] == 4) return "Pop";
         if (game.places[game.currentPlayer] == 8) return "Pop";

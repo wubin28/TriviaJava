@@ -49,7 +49,7 @@ public class Game
                 System.out.println(players.get(currentPlayer).getName()
                         + "'s new location is "
                         + players.get(currentPlayer).getPlace());
-                System.out.println("The category is " + questionMaker.currentCategory(this));
+                System.out.println("The category is " + questionMaker.currentCategory(this, null));
                 questionMaker.askQuestion(this);
             } else {
                 System.out.println(players.get(currentPlayer).getName() + " is not getting out of the penalty box");
@@ -63,7 +63,7 @@ public class Game
             System.out.println(players.get(currentPlayer).getName()
                     + "'s new location is "
                     + players.get(currentPlayer).getPlace());
-            System.out.println("The category is " + questionMaker.currentCategory(this));
+            System.out.println("The category is " + questionMaker.currentCategory(this, null));
             questionMaker.askQuestion(this);
         }
 

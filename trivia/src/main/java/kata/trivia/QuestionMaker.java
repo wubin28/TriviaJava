@@ -1,34 +1,35 @@
 package kata.trivia;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class QuestionMaker {
-    LinkedList popQuestions = new LinkedList();
-    LinkedList scienceQuestions = new LinkedList();
-    LinkedList sportsQuestions = new LinkedList();
-    LinkedList rockQuestions = new LinkedList();
+    List popQuestions = new LinkedList();
+    List scienceQuestions = new LinkedList();
+    List sportsQuestions = new LinkedList();
+    List rockQuestions = new LinkedList();
 
     public QuestionMaker() {
         for (int i = 0; i < 50; i++) {
-            popQuestions.addLast("Pop Question " + i);
-            scienceQuestions.addLast(("Science Question " + i));
-            sportsQuestions.addLast(("Sports Question " + i));
-            rockQuestions.addLast(createRockQuestion(i));
+            popQuestions.add("Pop Question " + i);
+            scienceQuestions.add(("Science Question " + i));
+            sportsQuestions.add(("Sports Question " + i));
+            rockQuestions.add(createRockQuestion(i));
         }
     }
-    public LinkedList getPopQuestions() {
+    public List getPopQuestions() {
         return popQuestions;
     }
 
-    public LinkedList getScienceQuestions() {
+    public List getScienceQuestions() {
         return scienceQuestions;
     }
 
-    public LinkedList getSportsQuestions() {
+    public List getSportsQuestions() {
         return sportsQuestions;
     }
 
-    public LinkedList getRockQuestions() {
+    public List getRockQuestions() {
         return rockQuestions;
     }
 
@@ -38,16 +39,20 @@ public class QuestionMaker {
 
     void askQuestion(Player currentPlayer) {
         if (currentCategory(currentPlayer) == "Pop") {
-            MyLogger.log((String)getPopQuestions().removeFirst());
+            MyLogger.log((String)getPopQuestions().get(0));
+            getPopQuestions().remove(0);
         }
         if (currentCategory(currentPlayer) == "Science") {
-            MyLogger.log((String)getScienceQuestions().removeFirst());
+            MyLogger.log((String)getPopQuestions().get(0));
+            getPopQuestions().remove(0);
         }
         if (currentCategory(currentPlayer) == "Sports") {
-            MyLogger.log((String)getSportsQuestions().removeFirst());
+            MyLogger.log((String)getPopQuestions().get(0));
+            getPopQuestions().remove(0);
         }
         if (currentCategory(currentPlayer) == "Rock") {
-            MyLogger.log((String)getRockQuestions().removeFirst());
+            MyLogger.log((String)getPopQuestions().get(0));
+            getPopQuestions().remove(0);
         }
     }
 

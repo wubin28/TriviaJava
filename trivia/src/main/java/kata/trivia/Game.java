@@ -130,7 +130,7 @@ public class Game
     }
 
     public String getNameOfCurrentPlayer() {
-        return (String)players.get(currentPlayer);
+        return players.get(currentPlayer).getName();
     }
 
     public int getNumberOfGoldCoinsOfCurrentPlayer() {

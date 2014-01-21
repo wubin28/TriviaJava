@@ -36,10 +36,14 @@ public class Game
 
         players.get(currentPlayer).processPenaltyBoxAndMovingForward(diceRollingNumber);
 
-        if (!(players.get(currentPlayer).isInPenaltyBox() && !players.get(currentPlayer).isGettingOutOfPenaltyBox())) {
+        if (!currentPlayerIsInPenaltyBoxAndNotGettingOutOfIt()) {
             MyLogger.log("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
             questionMaker.askQuestion(players.get(currentPlayer));
         }
+    }
+
+    private boolean currentPlayerIsInPenaltyBoxAndNotGettingOutOfIt() {
+        return (players.get(currentPlayer).isInPenaltyBox() && !players.get(currentPlayer).isGettingOutOfPenaltyBox());
     }
 
 

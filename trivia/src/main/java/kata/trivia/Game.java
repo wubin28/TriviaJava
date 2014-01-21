@@ -52,7 +52,7 @@ public class Game
                 System.out.println(players.get(currentPlayer)
                         + "'s new location is "
                         + places[currentPlayer]);
-                System.out.println("The category is " + currentCategory());
+                System.out.println("The category is " + questionMaker.currentCategory(this));
                 questionMaker.askQuestion(this);
             } else {
                 System.out.println(players.get(currentPlayer) + " is not getting out of the penalty box");
@@ -67,25 +67,12 @@ public class Game
             System.out.println(players.get(currentPlayer)
                     + "'s new location is "
                     + places[currentPlayer]);
-            System.out.println("The category is " + currentCategory());
+            System.out.println("The category is " + questionMaker.currentCategory(this));
             questionMaker.askQuestion(this);
         }
 
     }
 
-
-    private String currentCategory() {
-        if (places[currentPlayer] == 0) return "Pop";
-        if (places[currentPlayer] == 4) return "Pop";
-        if (places[currentPlayer] == 8) return "Pop";
-        if (places[currentPlayer] == 1) return "Science";
-        if (places[currentPlayer] == 5) return "Science";
-        if (places[currentPlayer] == 9) return "Science";
-        if (places[currentPlayer] == 2) return "Sports";
-        if (places[currentPlayer] == 6) return "Sports";
-        if (places[currentPlayer] == 10) return "Sports";
-        return "Rock";
-    }
 
     public boolean wasCorrectlyAnswered() {
         if (inPenaltyBox[currentPlayer]){

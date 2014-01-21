@@ -64,7 +64,8 @@ Find all the nouns from the descriptions of all the major logic and use them to 
       * Question
   * GameRunner
 Done: Refactor method GameRunner.main().
-Refactor method Game.wasCorrectlyAnswered().
+Done: Refactor method Game.wasCorrectlyAnswered().
+Move purse from class Game to class Player.
 Check the test code and make the access modifiers of all fields of the Game class to be private.
 
 ==============

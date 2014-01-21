@@ -38,13 +38,13 @@ public class QuestionMaker {
 
     void askQuestion(Player currentPlayer) {
         if (currentCategory(currentPlayer) == "Pop")
-            System.out.println(getPopQuestions().removeFirst());
+            MyLogger.log((String)getPopQuestions().removeFirst());
         if (currentCategory(currentPlayer) == "Science")
-            System.out.println(getScienceQuestions().removeFirst());
+            MyLogger.log((String)getScienceQuestions().removeFirst());
         if (currentCategory(currentPlayer) == "Sports")
-            System.out.println(getSportsQuestions().removeFirst());
+            MyLogger.log((String)getSportsQuestions().removeFirst());
         if (currentCategory(currentPlayer) == "Rock")
-            System.out.println(getRockQuestions().removeFirst());
+            MyLogger.log((String)getRockQuestions().removeFirst());
     }
 
     String currentCategory(Player currentPlayer) {

@@ -33,7 +33,7 @@ public class Game
         return players.size();
     }
 
-    public void roll(int diceRollingNumber) {
+    public void processDiceRollingNumber(int diceRollingNumber) {
         MyLogger.log(players.get(currentPlayer).getName() + " is the current player");
         MyLogger.log("They have rolled a " + diceRollingNumber);
 

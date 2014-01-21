@@ -71,4 +71,8 @@ public class Player {
     public void winAGoldCoin() {
         this.purse++;
     }
+
+    public int getNumberOfGoldCoins() {
+        return this.purse;
+    }
 }

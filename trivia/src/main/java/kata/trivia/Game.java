@@ -40,21 +40,6 @@ public class Game
         processPenaltyBoxAndMovingForwardAndBeingAskedQuestion(diceRollingNumber);
     }
 
-    private void processPenaltyBoxAndMovingForwardAndBeingAskedQuestion(int diceRollingNumber) {
-        if (inPenaltyBox[currentPlayer]) {
-            if (diceRollingNumber % 2 != 0) {
-                isGettingOutOfPenaltyBox = true;
-                MyLogger.log(players.get(currentPlayer).getName() + " is getting out of the penalty box");
-
-                currentPlayerMovedForwardAndBeingAskedQuestion(diceRollingNumber);
-            } else {
-                MyLogger.log(players.get(currentPlayer).getName() + " is not getting out of the penalty box");
-                isGettingOutOfPenaltyBox = false;
-            }
-        } else {
-            currentPlayerMovedForwardAndBeingAskedQuestion(diceRollingNumber);
-        }
-    }
 
     private void currentPlayerMovedForwardAndBeingAskedQuestion(int roll) {
         players.get(currentPlayer).moveForward(roll);

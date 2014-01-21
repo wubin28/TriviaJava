@@ -8,7 +8,7 @@ public class Game
     private ArrayList players = new ArrayList();
     int[] places = new int[6];
     private int[] purses  = new int[6];
-    boolean[] inPenaltyBox  = new boolean[6];
+    private boolean[] inPenaltyBox  = new boolean[6];
 
     LinkedList popQuestions = new LinkedList();
     LinkedList scienceQuestions = new LinkedList();
@@ -178,5 +178,9 @@ public class Game
 
     public boolean isCurrentPlayerInPenaltyBox() {
         return inPenaltyBox[currentPlayer];
+    }
+
+    public boolean isPreviousPlayerOfCurrentPlayerInPenaltyBox() {
+        return inPenaltyBox[currentPlayer - 1];
     }
 }

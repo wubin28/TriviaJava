@@ -86,7 +86,7 @@ public class GameTest {
         game.roll(4);
         game.wrongAnswer();
         assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
-        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer - 1]);
+        assertEquals("Failure - ", true, game.isPreviousPlayerOfCurrentPlayerInPenaltyBox());
     }
 
     @Test
@@ -102,7 +102,7 @@ public class GameTest {
         game.roll(4);
         game.wrongAnswer();
         assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
-        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer - 1]);
+        assertEquals("Failure - ", true, game.isPreviousPlayerOfCurrentPlayerInPenaltyBox());
 
         game.roll(4);
         game.wasCorrectlyAnswered();
@@ -111,7 +111,7 @@ public class GameTest {
 
         game.roll(4);
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
-        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
+        assertEquals("Failure - ", true, game.isCurrentPlayerInPenaltyBox());
         assertEquals("Failure - ", false, game.isGettingOutOfPenaltyBox);
     }
     @Test
@@ -127,7 +127,7 @@ public class GameTest {
         game.roll(4);
         game.wrongAnswer();
         assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
-        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer - 1]);
+        assertEquals("Failure - ", true, game.isPreviousPlayerOfCurrentPlayerInPenaltyBox());
 
         game.roll(4);
         game.wasCorrectlyAnswered();
@@ -136,7 +136,7 @@ public class GameTest {
 
         game.roll(5);
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
-        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
+        assertEquals("Failure - ", true, game.isCurrentPlayerInPenaltyBox());
         assertEquals("Failure - ", true, game.isGettingOutOfPenaltyBox);
     }
 

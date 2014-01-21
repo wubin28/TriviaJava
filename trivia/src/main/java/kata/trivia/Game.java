@@ -36,7 +36,7 @@ public class Game
     }
 
     public void roll(int roll) {
-        System.out.println(players.get(currentPlayer) + " is the current player");
+        System.out.println(players.get(currentPlayer).getName() + " is the current player");
         System.out.println("They have rolled a " + roll);
 
         if (inPenaltyBox[currentPlayer]) {
@@ -49,8 +49,8 @@ public class Game
                 System.out.println(players.get(currentPlayer).getName()
                         + "'s new location is "
                         + players.get(currentPlayer).getPlace());
-                System.out.println("The category is " + questionMaker.currentCategory(this, null));
-                questionMaker.askQuestion(this);
+                System.out.println("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
+                questionMaker.askQuestion(players.get(currentPlayer));
             } else {
                 System.out.println(players.get(currentPlayer).getName() + " is not getting out of the penalty box");
                 isGettingOutOfPenaltyBox = false;
@@ -63,8 +63,8 @@ public class Game
             System.out.println(players.get(currentPlayer).getName()
                     + "'s new location is "
                     + players.get(currentPlayer).getPlace());
-            System.out.println("The category is " + questionMaker.currentCategory(this, null));
-            questionMaker.askQuestion(this);
+            System.out.println("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
+            questionMaker.askQuestion(players.get(currentPlayer));
         }
 
     }

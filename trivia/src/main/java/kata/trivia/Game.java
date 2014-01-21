@@ -58,12 +58,11 @@ public class Game
 
         } else {
 
-            places[currentPlayer] = places[currentPlayer] + roll;
-            if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
+            players.get(currentPlayer).moveForward(roll);
 
             System.out.println(players.get(currentPlayer).getName()
                     + "'s new location is "
-                    + places[currentPlayer]);
+                    + players.get(currentPlayer).getPlace());
             System.out.println("The category is " + questionMaker.currentCategory(this));
             questionMaker.askQuestion(this);
         }

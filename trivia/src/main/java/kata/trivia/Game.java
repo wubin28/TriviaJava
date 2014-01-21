@@ -48,7 +48,7 @@ public class Game
 
                 System.out.println(players.get(currentPlayer).getName()
                         + "'s new location is "
-                        + places[currentPlayer]);
+                        + players.get(currentPlayer).getPlace());
                 System.out.println("The category is " + questionMaker.currentCategory(this));
                 questionMaker.askQuestion(this);
             } else {

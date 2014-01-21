@@ -88,4 +88,20 @@ public class GameTest {
         game.wrongAnswer();
         assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
     }
+
+    @Test
+    public void WHEN_AddTwoPlayersAndFirstPlayerAnswersQuestionWrong_THEN_SendToPenaltyBox() {
+        // Given
+        Game game = new Game();
+
+        // When
+        game.addPlayer("Chet");
+        game.addPlayer("Pat");
+
+        // Then
+        game.roll(4);
+        game.wrongAnswer();
+        assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
+        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer - 1]);
+    }
 }

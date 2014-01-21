@@ -11,6 +11,10 @@ public class GameRunner {
 
     private static boolean notAWinner;
 
+    private GameRunner() {
+
+    }
+
     public static void main(String[] args) {
         Game aGame = new Game();
 

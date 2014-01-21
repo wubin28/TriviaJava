@@ -18,7 +18,7 @@ public class QuestionMaker {
             popQuestions.add("Pop Question " + i);
             scienceQuestions.add(("Science Question " + i));
             sportsQuestions.add(("Sports Question " + i));
-            rockQuestions.add(createRockQuestion(i));
+            rockQuestions.add("Rock Question " + i);
         }
     }
     public List getPopQuestions() {
@@ -35,10 +35,6 @@ public class QuestionMaker {
 
     public List getRockQuestions() {
         return rockQuestions;
-    }
-
-    public String createRockQuestion(int index){
-        return "Rock Question " + index;
     }
 
     void askQuestion(Player currentPlayer) {

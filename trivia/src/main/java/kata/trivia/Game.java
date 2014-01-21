@@ -14,12 +14,6 @@ public class Game
     private boolean isGettingOutOfPenaltyBox;
 
     public  Game(){
-        for (int i = 0; i < 50; i++) {
-            questionMaker.getPopQuestions().addLast("Pop Question " + i);
-            questionMaker.getScienceQuestions().addLast(("Science Question " + i));
-            questionMaker.getSportsQuestions().addLast(("Sports Question " + i));
-            questionMaker.getRockQuestions().addLast(createRockQuestion(i));
-        }
     }
 
     public String createRockQuestion(int index){

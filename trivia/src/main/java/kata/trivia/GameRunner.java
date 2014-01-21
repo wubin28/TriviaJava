@@ -8,14 +8,11 @@ import java.util.Random;
  * Time: 上午8:47
  */
 public class GameRunner {
-
-    private static boolean notAWinner;
-
     private GameRunner() {
-
     }
 
     public static void main(String[] args) {
+        boolean gameNotOver;
         Game aGame = new Game();
 
         aGame.addPlayer("Chet");
@@ -26,8 +23,8 @@ public class GameRunner {
 
         do {
             aGame.processDiceRollingNumber(rand.nextInt(5) + 1);
-            aGame.processQuestionAnswering(rand.nextInt(9));
-        } while (notAWinner);
+            gameNotOver = aGame.processQuestionAnswering(rand.nextInt(9));
+        } while (gameNotOver);
     }
 
 }

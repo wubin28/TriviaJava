@@ -12,6 +12,7 @@ public class Player {
     private int place = 0;
     private boolean isGettingOutOfPenaltyBox = true;
     private boolean inPenaltyBox = false;
+    private int purse = 0;
 
     public Player(String name) {
         this.name = name;
@@ -65,5 +66,9 @@ public class Player {
 
     public boolean isGettingOutOfPenaltyBox() {
         return isGettingOutOfPenaltyBox;
+    }
+
+    public void winAGoldCoin() {
+        this.purse++;
     }
 }

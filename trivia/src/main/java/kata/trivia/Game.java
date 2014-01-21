@@ -56,10 +56,9 @@ public class Game
     private void currentPlayerWinsAGoldCoin() {
         MyLogger.log("Answer was correct!!!!");
         players.get(currentPlayer).winAGoldCoin();
-        purses[currentPlayer]++;
         MyLogger.log(players.get(currentPlayer).getName()
                 + " now has "
-                + purses[currentPlayer]
+                + players.get(currentPlayer).getNumberOfGoldCoins()
                 + " Gold Coins.");
     }
 

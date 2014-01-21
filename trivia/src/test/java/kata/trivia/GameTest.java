@@ -128,6 +128,7 @@ public class GameTest {
         game.roll(4);
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
         assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
+        assertEquals("Failure - ", false, game.isGettingOutOfPenaltyBox);
     }
     @Test
     public void GIVEN_CurrentPlayerInPenaltyBox_WHEN_RollingDiceAndNumberIsNotDivisibleBy2_THEN_GetOutOfPenaltyBox() {

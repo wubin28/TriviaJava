@@ -120,11 +120,13 @@ public class Game
         return players.get(currentPlayer).isGettingOutOfPenaltyBox();
     }
 
-    public void processQuestionAnswering(int randomNumber) {
+    public boolean processQuestionAnswering(int randomNumber) {
+        boolean gameNotOver = true;
         if (randomNumber == 7) {
-            GameRunner.notAWinner = wrongAnswer();
+            gameNotOver = wrongAnswer();
         } else {
-            GameRunner.notAWinner = wasCorrectlyAnswered();
+            gameNotOver = wasCorrectlyAnswered();
         }
+        return gameNotOver;
     }
 }

@@ -49,8 +49,8 @@ Done: Find all pieces of the major logic which are not going to be modified from
     Game.addPlayer()
     Game.roll()
     Game.wasCorrectlyAnswered()
-Done: Check the test code and make the access modifiers of all fields of the Game class to be private.
 Done: List all public method names for each major logic above.
+Eliminate all duplicated code.
 Find all the nouns from the descriptions of all the major logic and use them to be the candidates of classes
   * Game
     * Game Board
@@ -62,6 +62,7 @@ Find all the nouns from the descriptions of all the major logic and use them to 
     * QuestionMaker, Done
       * Question
   * GameRunner
+Done: Check the test code and make the access modifiers of all fields of the Game class to be private.
 
 ==============
 Design patterns

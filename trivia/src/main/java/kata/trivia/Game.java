@@ -119,4 +119,12 @@ public class Game
     public boolean isCurrentPlayerGettingOutOfPenaltyBox() {
         return players.get(currentPlayer).isGettingOutOfPenaltyBox();
     }
+
+    public void processQuestionAnswering(int randomNumber) {
+        if (randomNumber == 7) {
+            GameRunner.notAWinner = wrongAnswer();
+        } else {
+            GameRunner.notAWinner = wasCorrectlyAnswered();
+        }
+    }
 }

@@ -26,12 +26,12 @@ public class GameRunner {
 
         do {
             aGame.processDiceRollingNumber(rand.nextInt(5) + 1);
-            processQuestionAnswering(aGame, rand);
+            processQuestionAnswering(aGame, rand.nextInt(9));
         } while (notAWinner);
     }
 
-    private static void processQuestionAnswering(Game aGame, Random rand) {
-        if (rand.nextInt(9) == 7) {
+    private static void processQuestionAnswering(Game aGame, int randomNumber) {
+        if (randomNumber == 7) {
             notAWinner = aGame.wrongAnswer();
         } else {
             notAWinner = aGame.wasCorrectlyAnswered();

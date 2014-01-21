@@ -76,22 +76,13 @@ public class Game
                         + " Gold Coins.");
 
                 boolean playerNotWon = playerNotWonYet();
-                currentPlayer++;
-                if (currentPlayer == players.size()) {
-                    currentPlayer = 0;
-                }
+                nextPlayer();
 
                 return playerNotWon;
             } else {
-                currentPlayer++;
-                if (currentPlayer == players.size()) {
-                    currentPlayer = 0;
-                }
+                nextPlayer();
                 return true;
             }
-
-
-
         } else {
 
             MyLogger.log("Answer was corrent!!!!");
@@ -102,12 +93,16 @@ public class Game
                     + " Gold Coins.");
 
             boolean playerNotWon = playerNotWonYet();
-            currentPlayer++;
-            if (currentPlayer == players.size()) {
-                currentPlayer = 0;
-            }
+            nextPlayer();
 
             return playerNotWon;
+        }
+    }
+
+    private void nextPlayer() {
+        currentPlayer++;
+        if (currentPlayer == players.size()) {
+            currentPlayer = 0;
         }
     }
 
@@ -116,10 +111,7 @@ public class Game
         MyLogger.log(players.get(currentPlayer).getName() + " was sent to the penalty box");
         inPenaltyBox[currentPlayer] = true;
 
-        currentPlayer++;
-        if (currentPlayer == players.size()) {
-            currentPlayer = 0;
-        }
+        nextPlayer();
         return true;
     }
 

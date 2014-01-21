@@ -25,7 +25,7 @@ Find all pieces of the major logic which are not going to be modified from the r
   Done: The order in which the players roll the dice is the same as the order in which they are added to the game.
   Done: Present a gold coin if the current player answers the question correctly.
   Done: Send to the penalty box and cannot answer a question if the current player answers the question wrong.
-  If the current player is in the penalty box and the number of dice-rolling of this player is divisible by 2, the player cannot get out of the penalty box and cannot answer a question.
+  Done: If the current player is in the penalty box and the number of dice-rolling of this player is divisible by 2, the player cannot get out of the penalty box and cannot answer a question.
   If the current player is in the penalty box and the number of dice-rolling of this player cannot be divisible by 2, the player will get out of the penalty box and can answer a question.
   The game will be over if as soon as any player gets 6 gold coins.
 Done: Draw the effect sketches of the public methods above to find out all the variables and methods which effect the return values of these public methods.

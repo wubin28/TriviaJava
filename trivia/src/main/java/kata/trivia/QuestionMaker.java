@@ -38,19 +38,19 @@ public class QuestionMaker {
     }
 
     void askQuestion(Player currentPlayer) {
-        if (currentCategory(currentPlayer) == "Pop") {
+        if ("Pop".equals(currentCategory(currentPlayer))) {
             MyLogger.log((String)getPopQuestions().get(0));
             getPopQuestions().remove(0);
         }
-        if (currentCategory(currentPlayer) == "Science") {
+        if ("Science".equals(currentCategory(currentPlayer))) {
             MyLogger.log((String)getPopQuestions().get(0));
             getPopQuestions().remove(0);
         }
-        if (currentCategory(currentPlayer) == "Sports") {
+        if ("Sports".equals(currentCategory(currentPlayer))) {
             MyLogger.log((String)getPopQuestions().get(0));
             getPopQuestions().remove(0);
         }
-        if (currentCategory(currentPlayer) == "Rock") {
+        if ("Rock".equals(currentCategory(currentPlayer))) {
             MyLogger.log((String)getPopQuestions().get(0));
             getPopQuestions().remove(0);
         }

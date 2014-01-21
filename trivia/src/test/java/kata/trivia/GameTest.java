@@ -104,4 +104,9 @@ public class GameTest {
         assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
         assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer - 1]);
     }
+
+    @Test
+    public void GIVEN_CurrentPlayerInPenaltyBox_WHEN_RollingDiceAndNumberIsDivisibleBy2_THEN_CannotGetOutOfPenaltyBox() {
+
+    }
 }

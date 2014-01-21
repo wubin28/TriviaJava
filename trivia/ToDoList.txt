@@ -54,9 +54,9 @@ Done: Use Sonar to fix all Major and more severe issues.
 Done: Eliminate all duplicated code.
 Find all the nouns from the descriptions of all the major logic and use them to be the candidates of classes
   * Game
-    * Game Board
-      * Penalty Box
+    * Penalty Box
     * Player, Done
+      * place (field), Done
       * Purse
     * Dice
     * Gold Coin

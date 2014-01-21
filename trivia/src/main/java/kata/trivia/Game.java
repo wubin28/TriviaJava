@@ -37,6 +37,10 @@ public class Game
         MyLogger.log(players.get(currentPlayer).getName() + " is the current player");
         MyLogger.log("They have rolled a " + diceRollingNumber);
 
+        processPenaltyBoxAndMovingForwardAndBeingAskedQuestion(diceRollingNumber);
+    }
+
+    private void processPenaltyBoxAndMovingForwardAndBeingAskedQuestion(int diceRollingNumber) {
         if (inPenaltyBox[currentPlayer]) {
             if (diceRollingNumber % 2 != 0) {
                 isGettingOutOfPenaltyBox = true;
@@ -50,7 +54,6 @@ public class Game
         } else {
             currentPlayerMovedForwardAndBeingAskedQuestion(diceRollingNumber);
         }
-
     }
 
     private void currentPlayerMovedForwardAndBeingAskedQuestion(int roll) {

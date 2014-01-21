@@ -36,14 +36,14 @@ public class QuestionMaker {
         return "Rock Question " + index;
     }
 
-    void askQuestion(Game game) {
-        if (currentCategory(game, null) == "Pop")
+    void askQuestion(Player currentPlayer) {
+        if (currentCategory(currentPlayer) == "Pop")
             System.out.println(getPopQuestions().removeFirst());
-        if (currentCategory(game, null) == "Science")
+        if (currentCategory(currentPlayer) == "Science")
             System.out.println(getScienceQuestions().removeFirst());
-        if (currentCategory(game, null) == "Sports")
+        if (currentCategory(currentPlayer) == "Sports")
             System.out.println(getSportsQuestions().removeFirst());
-        if (currentCategory(game, null) == "Rock")
+        if (currentCategory(currentPlayer) == "Rock")
             System.out.println(getRockQuestions().removeFirst());
     }
 

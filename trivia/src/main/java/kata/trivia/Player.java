@@ -58,4 +58,8 @@ public class Player {
     public boolean isInPenaltyBox() {
         return this.inPenaltyBox;
     }
+
+    public void sentToPenaltyBox() {
+        this.inPenaltyBox = true;
+    }
 }

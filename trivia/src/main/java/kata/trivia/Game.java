@@ -85,7 +85,7 @@ public class Game
     public boolean wrongAnswer(){
         MyLogger.log("Question was incorrectly answered");
         MyLogger.log(players.get(currentPlayer).getName() + " was sent to the penalty box");
-        inPenaltyBox[currentPlayer] = true;
+        players.get(currentPlayer).sentToPenaltyBox();
 
         nextPlayer();
         return true;

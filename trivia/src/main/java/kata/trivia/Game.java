@@ -13,19 +13,11 @@ public class Game
     public  Game(){
     }
 
-    public boolean isPlayable() {
-        return (howManyPlayers() >= 2);
-    }
-
     public void addPlayer(String playerName) {
         players.add(new Player(playerName));
 
         MyLogger.log(playerName + " was added");
         MyLogger.log("They are player number " + players.size());
-    }
-
-    public int howManyPlayers() {
-        return players.size();
     }
 
     public void processDiceRollingNumber(int diceRollingNumber) {

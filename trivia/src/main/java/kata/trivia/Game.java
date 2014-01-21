@@ -51,15 +51,9 @@ public class Game
         boolean gameNotOver = true;
         if (players.get(currentPlayer).isInPenaltyBox()){
             if (players.get(currentPlayer).isGettingOutOfPenaltyBox()) {
-                MyLogger.log("Answer was correct!!!!");
-                purses[currentPlayer]++;
-                MyLogger.log(players.get(currentPlayer).getName()
-                        + " now has "
-                        + purses[currentPlayer]
-                        + " Gold Coins.");
+                currentPlayerWinsAGoldCoin();
 
                 gameNotOver = playerNotWonYet();
-            } else {
             }
         } else {
 
@@ -74,6 +68,15 @@ public class Game
         }
         nextPlayer();
         return gameNotOver;
+    }
+
+    private void currentPlayerWinsAGoldCoin() {
+        MyLogger.log("Answer was correct!!!!");
+        purses[currentPlayer]++;
+        MyLogger.log(players.get(currentPlayer).getName()
+                + " now has "
+                + purses[currentPlayer]
+                + " Gold Coins.");
     }
 
     private void nextPlayer() {

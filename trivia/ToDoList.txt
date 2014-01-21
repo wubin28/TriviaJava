@@ -56,7 +56,7 @@ Find all the nouns from the descriptions of all the major logic and use them to 
   * Game
     * Game Board
       * Penalty Box
-    * Player
+    * Player, Done
       * Purse
     * Dice
     * Gold Coin

@@ -43,16 +43,16 @@ public class QuestionMaker {
             getPopQuestions().remove(0);
         }
         if (SCIENCE.equals(currentCategory(currentPlayer))) {
-            MyLogger.log((String)getPopQuestions().get(0));
-            getPopQuestions().remove(0);
+            MyLogger.log((String)getScienceQuestions().get(0));
+            getScienceQuestions().remove(0);
         }
         if (SPORTS.equals(currentCategory(currentPlayer))) {
-            MyLogger.log((String)getPopQuestions().get(0));
-            getPopQuestions().remove(0);
+            MyLogger.log((String)getSportsQuestions().get(0));
+            getSportsQuestions().remove(0);
         }
         if (ROCK.equals(currentCategory(currentPlayer))) {
-            MyLogger.log((String)getPopQuestions().get(0));
-            getPopQuestions().remove(0);
+            MyLogger.log((String)getRockQuestions().get(0));
+            getRockQuestions().remove(0);
         }
     }
 

@@ -1,11 +1,12 @@
 package kata.trivia;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Game
 {
     QuestionMaker questionMaker = new QuestionMaker();
-    private ArrayList<Player> players = new ArrayList<Player>();
+    private List<Player> players = new ArrayList<Player>();
     private int[] purses  = new int[6];
     private boolean[] inPenaltyBox  = new boolean[6];
 

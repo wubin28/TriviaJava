@@ -15,22 +15,6 @@ import static junit.framework.TestCase.assertEquals;
 public class GameTest {
 
     @Test
-    public void WHEN_APlayerGotSixGoldCoins_THEN_GameIsOver() {
-        // Given
-        Game game = new Game();
-
-        // When
-        // Then
-        game.addPlayer("Chet");
-
-        for (int i = 0; i < 5; i++) {
-            game.roll(4);
-            assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
-        }
-        assertEquals("Failure - ", false, game.wasCorrectlyAnswered());
-    }
-
-    @Test
     public void WHEN_AddPlayersOneByOne_THEN_RollDiceInTheSameOrder() {
         // Given
         Game game = new Game();
@@ -155,4 +139,21 @@ public class GameTest {
         assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
         assertEquals("Failure - ", true, game.isGettingOutOfPenaltyBox);
     }
+
+    @Test
+    public void WHEN_APlayerGotSixGoldCoins_THEN_GameIsOver() {
+        // Given
+        Game game = new Game();
+
+        // When
+        // Then
+        game.addPlayer("Chet");
+
+        for (int i = 0; i < 5; i++) {
+            game.roll(4);
+            assertEquals("Failure - ", true, game.wasCorrectlyAnswered());
+        }
+        assertEquals("Failure - ", false, game.wasCorrectlyAnswered());
+    }
+
 }

@@ -43,33 +43,27 @@ public class Game
         if (inPenaltyBox[currentPlayer]) {
             if (roll % 2 != 0) {
                 isGettingOutOfPenaltyBox = true;
-
                 MyLogger.log(players.get(currentPlayer).getName() + " is getting out of the penalty box");
-                players.get(currentPlayer).moveForward(roll);
 
-                MyLogger.log(players.get(currentPlayer).getName()
-                        + "'s new location is "
-                        + players.get(currentPlayer).getPlace());
-                MyLogger.log("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
-                questionMaker.askQuestion(players.get(currentPlayer));
+                currentPlayerMovedForwardAndBeingAskedQuestion(roll);
             } else {
                 MyLogger.log(players.get(currentPlayer).getName() + " is not getting out of the penalty box");
                 isGettingOutOfPenaltyBox = false;
             }
-
         } else {
-
-            players.get(currentPlayer).moveForward(roll);
-
-            MyLogger.log(players.get(currentPlayer).getName()
-                    + "'s new location is "
-                    + players.get(currentPlayer).getPlace());
-            MyLogger.log("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
-            questionMaker.askQuestion(players.get(currentPlayer));
+            currentPlayerMovedForwardAndBeingAskedQuestion(roll);
         }
 
     }
 
+    private void currentPlayerMovedForwardAndBeingAskedQuestion(int roll) {
+        players.get(currentPlayer).moveForward(roll);
+        MyLogger.log(players.get(currentPlayer).getName()
+                + "'s new location is "
+                + players.get(currentPlayer).getPlace());
+        MyLogger.log("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
+        questionMaker.askQuestion(players.get(currentPlayer));
+    }
 
     public boolean wasCorrectlyAnswered() {
         if (inPenaltyBox[currentPlayer]){

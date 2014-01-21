@@ -8,13 +8,13 @@ package kata.trivia;
  * To change this template use File | Settings | File Templates.
  */
 public class Player {
-    private final String playerName;
+    private final String name;
 
-    public Player(String playerName) {
-        this.playerName = playerName;
+    public Player(String name) {
+        this.name = name;
     }
 
     public String getName() {
-        return this.playerName;
+        return this.name;
     }
 }

@@ -21,7 +21,6 @@ public class Game
     public void addPlayer(String playerName) {
         players.add(new Player(playerName));
         purses[howManyPlayers()] = 0;
-        inPenaltyBox[howManyPlayers()] = false;
 
         MyLogger.log(playerName + " was added");
         MyLogger.log("They are player number " + players.size());
@@ -43,7 +42,7 @@ public class Game
 
 
     public boolean wasCorrectlyAnswered() {
-        if (inPenaltyBox[currentPlayer]){
+        if (players.get(currentPlayer).isInPenaltyBox()){
             if (isGettingOutOfPenaltyBox()) {
                 MyLogger.log("Answer was correct!!!!");
                 purses[currentPlayer]++;

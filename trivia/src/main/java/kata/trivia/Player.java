@@ -55,4 +55,7 @@ public class Player {
                 + this.place);
     }
 
+    public boolean isInPenaltyBox() {
+        return this.inPenaltyBox;
+    }
 }

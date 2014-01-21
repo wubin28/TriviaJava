@@ -183,4 +183,8 @@ public class Game
     public boolean isPreviousPlayerOfCurrentPlayerInPenaltyBox() {
         return inPenaltyBox[currentPlayer - 1];
     }
+
+    public boolean isNextPlayerOfCurrentPlayerInPenaltyBox() {
+        return inPenaltyBox[currentPlayer + 1];
+    }
 }

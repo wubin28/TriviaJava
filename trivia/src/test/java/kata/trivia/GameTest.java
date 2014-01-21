@@ -107,7 +107,7 @@ public class GameTest {
         game.roll(4);
         game.wasCorrectlyAnswered();
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
-        assertEquals("Failure - ", false, game.inPenaltyBox[game.currentPlayer + 1]);
+        assertEquals("Failure - ", false, game.isNextPlayerOfCurrentPlayerInPenaltyBox());
 
         game.roll(4);
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
@@ -132,7 +132,7 @@ public class GameTest {
         game.roll(4);
         game.wasCorrectlyAnswered();
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
-        assertEquals("Failure - ", false, game.inPenaltyBox[game.currentPlayer + 1]);
+        assertEquals("Failure - ", false, game.isNextPlayerOfCurrentPlayerInPenaltyBox());
 
         game.roll(5);
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());

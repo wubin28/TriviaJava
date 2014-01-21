@@ -36,8 +36,10 @@ public class Game
 
         players.get(currentPlayer).processPenaltyBoxAndMovingForward(diceRollingNumber);
 
-        MyLogger.log("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
-        questionMaker.askQuestion(players.get(currentPlayer));
+        if (!(players.get(currentPlayer).isInPenaltyBox() && !players.get(currentPlayer).isGettingOutOfPenaltyBox())) {
+            MyLogger.log("The category is " + questionMaker.currentCategory(players.get(currentPlayer)));
+            questionMaker.askQuestion(players.get(currentPlayer));
+        }
     }
 
 

@@ -175,4 +175,8 @@ public class Game
     public int getNumberOfGoldCoinsOfCurrentPlayer() {
         return purses[currentPlayer];
     }
+
+    public boolean isCurrentPlayerInPenaltyBox() {
+        return inPenaltyBox[currentPlayer];
+    }
 }

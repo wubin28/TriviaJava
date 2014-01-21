@@ -70,7 +70,7 @@ public class GameTest {
         // Then
         game.roll(4);
         game.wrongAnswer();
-        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
+        assertEquals("Failure - ", true, game.isCurrentPlayerInPenaltyBox());
     }
 
     @Test

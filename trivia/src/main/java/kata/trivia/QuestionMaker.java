@@ -6,6 +6,7 @@ import java.util.List;
 public class QuestionMaker {
     public static final String POP = "Pop";
     public static final String SCIENCE = "Science";
+    public static final String SPORTS = "Sports";
     List popQuestions = new LinkedList();
     List scienceQuestions = new LinkedList();
     List sportsQuestions = new LinkedList();
@@ -48,7 +49,7 @@ public class QuestionMaker {
             MyLogger.log((String)getPopQuestions().get(0));
             getPopQuestions().remove(0);
         }
-        if ("Sports".equals(currentCategory(currentPlayer))) {
+        if (SPORTS.equals(currentCategory(currentPlayer))) {
             MyLogger.log((String)getPopQuestions().get(0));
             getPopQuestions().remove(0);
         }
@@ -65,9 +66,9 @@ public class QuestionMaker {
         if (currentPlayer.getPlace() == 1) {return SCIENCE;}
         if (currentPlayer.getPlace() == 5) {return SCIENCE;}
         if (currentPlayer.getPlace() == 9) {return SCIENCE;}
-        if (currentPlayer.getPlace() == 2) {return "Sports";}
-        if (currentPlayer.getPlace() == 6) {return "Sports";}
-        if (currentPlayer.getPlace() == 10) {return "Sports";}
+        if (currentPlayer.getPlace() == 2) {return SPORTS;}
+        if (currentPlayer.getPlace() == 6) {return SPORTS;}
+        if (currentPlayer.getPlace() == 10) {return SPORTS;}
         return "Rock";
     }
 }

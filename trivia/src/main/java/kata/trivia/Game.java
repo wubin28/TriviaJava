@@ -49,15 +49,8 @@ public class Game
 
     public boolean wasCorrectlyAnswered() {
         boolean gameNotOver = true;
-        if (players.get(currentPlayer).isInPenaltyBox()){
-            if (players.get(currentPlayer).isGettingOutOfPenaltyBox()) {
-                currentPlayerWinsAGoldCoin();
-                gameNotOver = playerNotWonYet();
-            }
-        } else {
-            currentPlayerWinsAGoldCoin();
-            gameNotOver = playerNotWonYet();
-        }
+        currentPlayerWinsAGoldCoin();
+        gameNotOver = playerNotWonYet();
         nextPlayer();
         return gameNotOver;
     }

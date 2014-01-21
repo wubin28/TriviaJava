@@ -107,6 +107,26 @@ public class GameTest {
 
     @Test
     public void GIVEN_CurrentPlayerInPenaltyBox_WHEN_RollingDiceAndNumberIsDivisibleBy2_THEN_CannotGetOutOfPenaltyBox() {
+        // Given
+        Game game = new Game();
+
+        // When
+        game.addPlayer("Chet");
+        game.addPlayer("Pat");
+
+        // Then
+        game.roll(4);
+        game.wrongAnswer();
+        assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
+        assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer - 1]);
+
+        game.roll(4);
+        game.wasCorrectlyAnswered();
+        assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
+        assertEquals("Failure - ", false, game.inPenaltyBox[game.currentPlayer + 1]);
+
+        game.roll(4);
+        assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
         assertEquals("Failure - ", true, game.inPenaltyBox[game.currentPlayer]);
     }
 }

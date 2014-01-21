@@ -8,8 +8,10 @@ package kata.trivia;
  * To change this template use File | Settings | File Templates.
  */
 public class Player {
-    private final String name;
-    private int place;
+    private String name = "";
+    private int place = 0;
+    private boolean isGettingOutOfPenaltyBox = true;
+    private boolean inPenaltyBox = false;
 
     public Player(String name) {
         this.name = name;
@@ -31,7 +33,7 @@ public class Player {
     }
 
     public void processPenaltyBoxAndMovingForwardAndBeingAskedQuestion(int diceRollingNumber) {
-        if (inPenaltyBox[currentPlayer]) {
+        if (inPenaltyBox) {
             if (diceRollingNumber % 2 != 0) {
                 isGettingOutOfPenaltyBox = true;
                 MyLogger.log(players.get(currentPlayer).getName() + " is getting out of the penalty box");

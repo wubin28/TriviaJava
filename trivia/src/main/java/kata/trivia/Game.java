@@ -36,22 +36,22 @@ public class Game
         return players.size();
     }
 
-    public void roll(int roll) {
+    public void roll(int diceRollingNumber) {
         MyLogger.log(players.get(currentPlayer).getName() + " is the current player");
-        MyLogger.log("They have rolled a " + roll);
+        MyLogger.log("They have rolled a " + diceRollingNumber);
 
         if (inPenaltyBox[currentPlayer]) {
-            if (roll % 2 != 0) {
+            if (diceRollingNumber % 2 != 0) {
                 isGettingOutOfPenaltyBox = true;
                 MyLogger.log(players.get(currentPlayer).getName() + " is getting out of the penalty box");
 
-                currentPlayerMovedForwardAndBeingAskedQuestion(roll);
+                currentPlayerMovedForwardAndBeingAskedQuestion(diceRollingNumber);
             } else {
                 MyLogger.log(players.get(currentPlayer).getName() + " is not getting out of the penalty box");
                 isGettingOutOfPenaltyBox = false;
             }
         } else {
-            currentPlayerMovedForwardAndBeingAskedQuestion(roll);
+            currentPlayerMovedForwardAndBeingAskedQuestion(diceRollingNumber);
         }
 
     }

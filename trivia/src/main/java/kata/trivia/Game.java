@@ -53,7 +53,7 @@ public class Game
                         + "'s new location is "
                         + places[currentPlayer]);
                 System.out.println("The category is " + currentCategory());
-                askQuestion();
+                questionMaker.askQuestion(this);
             } else {
                 System.out.println(players.get(currentPlayer) + " is not getting out of the penalty box");
                 isGettingOutOfPenaltyBox = false;
@@ -68,20 +68,9 @@ public class Game
                     + "'s new location is "
                     + places[currentPlayer]);
             System.out.println("The category is " + currentCategory());
-            askQuestion();
+            questionMaker.askQuestion(this);
         }
 
-    }
-
-    private void askQuestion() {
-        if (currentCategory() == "Pop")
-            System.out.println(questionMaker.getPopQuestions().removeFirst());
-        if (currentCategory() == "Science")
-            System.out.println(questionMaker.getScienceQuestions().removeFirst());
-        if (currentCategory() == "Sports")
-            System.out.println(questionMaker.getSportsQuestions().removeFirst());
-        if (currentCategory() == "Rock")
-            System.out.println(questionMaker.getRockQuestions().removeFirst());
     }
 
 

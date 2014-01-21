@@ -35,4 +35,15 @@ public class QuestionMaker {
     public String createRockQuestion(int index){
         return "Rock Question " + index;
     }
+
+    void askQuestion(Game game) {
+        if (game.currentCategory() == "Pop")
+            System.out.println(getPopQuestions().removeFirst());
+        if (game.currentCategory() == "Science")
+            System.out.println(getScienceQuestions().removeFirst());
+        if (game.currentCategory() == "Sports")
+            System.out.println(getSportsQuestions().removeFirst());
+        if (game.currentCategory() == "Rock")
+            System.out.println(getRockQuestions().removeFirst());
+    }
 }

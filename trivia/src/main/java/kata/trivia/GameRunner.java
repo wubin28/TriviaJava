@@ -26,11 +26,15 @@ public class GameRunner {
 
         do {
             aGame.processDiceRollingNumber(rand.nextInt(5) + 1);
-            if (rand.nextInt(9) == 7) {
-                notAWinner = aGame.wrongAnswer();
-            } else {
-                notAWinner = aGame.wasCorrectlyAnswered();
-            }
+            processQuestionAnswering(aGame, rand);
         } while (notAWinner);
+    }
+
+    private static void processQuestionAnswering(Game aGame, Random rand) {
+        if (rand.nextInt(9) == 7) {
+            notAWinner = aGame.wrongAnswer();
+        } else {
+            notAWinner = aGame.wasCorrectlyAnswered();
+        }
     }
 }

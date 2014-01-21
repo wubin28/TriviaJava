@@ -43,7 +43,7 @@ public class Game
 
     public boolean wasCorrectlyAnswered() {
         if (players.get(currentPlayer).isInPenaltyBox()){
-            if (isGettingOutOfPenaltyBox()) {
+            if (players.get(currentPlayer).isGettingOutOfPenaltyBox()) {
                 MyLogger.log("Answer was correct!!!!");
                 purses[currentPlayer]++;
                 MyLogger.log(players.get(currentPlayer).getName()
@@ -105,18 +105,18 @@ public class Game
     }
 
     public boolean isCurrentPlayerInPenaltyBox() {
-        return inPenaltyBox[currentPlayer];
+        return players.get(currentPlayer).isInPenaltyBox();
     }
 
     public boolean isPreviousPlayerOfCurrentPlayerInPenaltyBox() {
-        return inPenaltyBox[currentPlayer - 1];
+        return players.get(currentPlayer - 1).isInPenaltyBox();
     }
 
     public boolean isNextPlayerOfCurrentPlayerInPenaltyBox() {
-        return inPenaltyBox[currentPlayer + 1];
+        return players.get(currentPlayer + 1).isInPenaltyBox();
     }
 
-    public boolean isGettingOutOfPenaltyBox() {
-        return isGettingOutOfPenaltyBox;
+    public boolean isCurrentPlayerGettingOutOfPenaltyBox() {
+        return players.get(currentPlayer).isGettingOutOfPenaltyBox();
     }
 }

@@ -112,7 +112,7 @@ public class GameTest {
         game.processDiceRollingNumber(4);
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
         assertEquals("Failure - ", true, game.isCurrentPlayerInPenaltyBox());
-        assertEquals("Failure - ", false, game.isGettingOutOfPenaltyBox());
+        assertEquals("Failure - ", false, game.isCurrentPlayerGettingOutOfPenaltyBox());
     }
 
     @Test
@@ -138,7 +138,7 @@ public class GameTest {
         game.processDiceRollingNumber(5);
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
         assertEquals("Failure - ", true, game.isCurrentPlayerInPenaltyBox());
-        assertEquals("Failure - ", true, game.isGettingOutOfPenaltyBox());
+        assertEquals("Failure - ", true, game.isCurrentPlayerGettingOutOfPenaltyBox());
     }
 
     @Test

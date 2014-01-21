@@ -17,4 +17,9 @@ public class Player {
     public String getName() {
         return this.name;
     }
+
+    public void moveForward(int numberOfSteps) {
+        this.place += roll;
+        if (this.place > 11) this.place -= 12;
+    }
 }

@@ -45,8 +45,6 @@ public class Game
 
                 System.out.println(players.get(currentPlayer).getName() + " is getting out of the penalty box");
                 players.get(currentPlayer).moveForward(roll);
-                places[currentPlayer] = places[currentPlayer] + roll;
-                if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 
                 System.out.println(players.get(currentPlayer).getName()
                         + "'s new location is "

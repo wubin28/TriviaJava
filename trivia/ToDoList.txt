@@ -9,8 +9,8 @@ Done: Find all public methods of class Game called by the client GameRunner and 
     Add the player.
     Initialize place, purse, and inPenaltyBox for this player.
   Game.roll()
-    Determine if the current player will get out of the penalty box according to the number of the roll.
-    Determine the place of the current player.
+    Determine if the current player will get out of the penalty box according to the dice roll number.
+    Determine the place of the current player according to the dice roll number.
     Determine the category of the question according to the value of the place of the current player.
     Ask a question.
   Game.wrongAnswer()
@@ -50,6 +50,8 @@ Done: Find all pieces of the major logic which are not going to be modified from
     Game.wasCorrectlyAnswered()
 Done: Check the test code and make the access modifiers of all fields of the Game class to be private.
 Done: List all public method names for each major logic above.
+Review and update all public method names of class Game according to the lists of the behaviors of these methods.
+
 
 =====================
 Done: Draw the effect sketches of the public methods above to find out all the variables and methods which effect the return values of these public methods.

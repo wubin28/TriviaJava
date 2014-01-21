@@ -157,4 +157,30 @@ public class GameTest {
         assertEquals("Failure - ", false, game.wasCorrectlyAnswered());
     }
 
+    @Test
+    public void GIVEN_TwoPlayersInPenaltyBox_WHEN_AnswerQuestionWrong_THEN_PlayerUnableToAnswerQuestionAnsweredAQuestionWrong() {
+        // Given
+        Game game = new Game();
+
+        // When
+        game.addPlayer("Chet");
+        game.addPlayer("Pat");
+
+        // Then
+        game.roll(4);
+        game.wrongAnswer();
+        assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
+        assertEquals("Failure - ", true, game.isPreviousPlayerOfCurrentPlayerInPenaltyBox());
+
+        game.roll(4);
+        game.wrongAnswer();
+        assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
+        assertEquals("Failure - ", true, game.isNextPlayerOfCurrentPlayerInPenaltyBox());
+
+        game.roll(4);
+        game.wrongAnswer();
+        assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
+        assertEquals("Failure - ", true, game.isPreviousPlayerOfCurrentPlayerInPenaltyBox());
+
+    }
 }

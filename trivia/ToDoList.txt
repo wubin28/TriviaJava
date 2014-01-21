@@ -23,13 +23,35 @@ Done: Find all public methods of class Game called by the client GameRunner and 
     Determine if continue the game.
 Done: Find all pieces of the major logic which are not going to be modified from the running of the client and the code of the methods above and write characterization tests for all of them.
   Done: The order in which the players roll the dice is the same as the order in which they are added to the game.
+    Game.addPlayer()
+    Game.roll()
+    Game.wasCorrectlyAnswered()
   Done: Present a gold coin if the current player answers the question correctly.
+    Game.addPlayer()
+    Game.roll()
+    Game.wasCorrectlyAnswered()
   Done: Send to the penalty box and cannot answer a question if the current player answers the question wrong.
+    Game.addPlayer()
+    Game.roll()
+    Game.wrongAnswer()
   Done: If the current player is in the penalty box and the number of dice-rolling of this player is divisible by 2, the player cannot get out of the penalty box and cannot answer a question.
+    Game.addPlayer()
+    Game.roll()
+    Game.wrongAnswer()
+    Game.wasCorrectlyAnswered()
   Done: If the current player is in the penalty box and the number of dice-rolling of this player cannot be divisible by 2, the player will get out of the penalty box and can answer a question.
+    Game.addPlayer()
+    Game.roll()
+    Game.wrongAnswer()
+    Game.wasCorrectlyAnswered()
   Done: The game will be over if as soon as any player gets 6 gold coins.
-Check the test code and make the access modifiers of all fields of the Game class to be private.
+    Game.addPlayer()
+    Game.roll()
+    Game.wasCorrectlyAnswered()
+Done: Check the test code and make the access modifiers of all fields of the Game class to be private.
+Done: List all public method names for each major logic above.
 
+=====================
 Done: Draw the effect sketches of the public methods above to find out all the variables and methods which effect the return values of these public methods.
 
 Write a characterization test for the pinch point in the effect sketches above. Need not mention the intents of the test in the name of the test. And write a blank expected values in the characterization test. Since those are what the characterization test is supposed to do.

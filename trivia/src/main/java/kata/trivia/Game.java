@@ -16,7 +16,7 @@ public class Game
     LinkedList rockQuestions = new LinkedList();
 
     int currentPlayer = 0;
-    boolean isGettingOutOfPenaltyBox;
+    private boolean isGettingOutOfPenaltyBox;
 
     public  Game(){
         for (int i = 0; i < 50; i++) {
@@ -115,7 +115,7 @@ public class Game
 
     public boolean wasCorrectlyAnswered() {
         if (inPenaltyBox[currentPlayer]){
-            if (isGettingOutOfPenaltyBox) {
+            if (isGettingOutOfPenaltyBox()) {
                 System.out.println("Answer was correct!!!!");
                 purses[currentPlayer]++;
                 System.out.println(players.get(currentPlayer)
@@ -186,5 +186,9 @@ public class Game
 
     public boolean isNextPlayerOfCurrentPlayerInPenaltyBox() {
         return inPenaltyBox[currentPlayer + 1];
+    }
+
+    public boolean isGettingOutOfPenaltyBox() {
+        return isGettingOutOfPenaltyBox;
     }
 }

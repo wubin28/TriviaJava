@@ -80,7 +80,7 @@ public class Game
 
 
     private boolean playerNotWonYet() {
-        return !(purses[currentPlayer] == 6);
+        return !(players.get(currentPlayer).getNumberOfGoldCoins() == 6);
     }
 
     public String getNameOfCurrentPlayer() {
@@ -88,7 +88,7 @@ public class Game
     }
 
     public int getNumberOfGoldCoinsOfCurrentPlayer() {
-        return purses[currentPlayer];
+        return players.get(currentPlayer).getNumberOfGoldCoins();
     }
 
     public boolean isCurrentPlayerInPenaltyBox() {

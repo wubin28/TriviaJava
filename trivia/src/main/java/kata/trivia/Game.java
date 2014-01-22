@@ -7,7 +7,6 @@ public class Game
 {
     private QuestionMaker questionMaker = new QuestionMaker();
     private List<Player> players = new ArrayList<Player>();
-
     private int currentPlayer = 0;
 
     public  Game(){

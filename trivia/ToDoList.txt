@@ -1,3 +1,16 @@
+Steps of taming the bad code
+  * Run the client GameRunner to see the output.
+  * Read the code of the client GameRunner and pay attention to how the public interface of the class Game is called by the client.
+  * Read the code of the class Game and pay attention to the public methods.
+
+  * List all the behaviors of the public methods of class Game called by client GameRunner.
+  * List all major behaviours of the code to be tamed which are not going to be modified.
+  * Write characterization tests for all the major behaviours above.
+
+  * Eliminate all duplicated code.
+  * Break responsibilities of big classes into new classes. Find all the nouns from the descriptions of all the major behaviours and use them to be the candidates of new classes.
+  * Use Sonar to fix all Major and more severe issues.
+========================================
 Done: Find all public methods of the class Game.
 Done: Find all public methods of class Game called by the client GameRunner and understand the behaviours of them by reading the code.
   GameRunner.main()
@@ -49,7 +62,6 @@ Done: Find all pieces of the major logic which are not going to be modified from
     Game.addPlayer()
     Game.roll()
     Game.wasCorrectlyAnswered()
-Done: List all public method names for each major logic above.
 Done: Use Sonar to fix all Major and more severe issues.
 Done: Eliminate all duplicated code.
 Find all the nouns from the descriptions of all the major logic and use them to be the candidates of classes

@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Game
 {
-    QuestionMaker questionMaker = new QuestionMaker();
+    private QuestionMaker questionMaker = new QuestionMaker();
     private List<Player> players = new ArrayList<Player>();
 
-    int currentPlayer = 0;
+    private int currentPlayer = 0;
 
     public  Game(){
     }

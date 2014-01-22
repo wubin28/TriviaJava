@@ -8,10 +8,10 @@ public class QuestionMaker {
     public static final String SCIENCE = "Science";
     public static final String SPORTS = "Sports";
     public static final String ROCK = "Rock";
-    List popQuestions = new LinkedList();
-    List scienceQuestions = new LinkedList();
-    List sportsQuestions = new LinkedList();
-    List rockQuestions = new LinkedList();
+    private List popQuestions = new LinkedList();
+    private List scienceQuestions = new LinkedList();
+    private List sportsQuestions = new LinkedList();
+    private List rockQuestions = new LinkedList();
 
     public QuestionMaker() {
         for (int i = 0; i < 50; i++) {

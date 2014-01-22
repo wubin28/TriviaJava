@@ -54,15 +54,15 @@ Done: Use Sonar to fix all Major and more severe issues.
 Done: Eliminate all duplicated code.
 Find all the nouns from the descriptions of all the major logic and use them to be the candidates of classes
   * Game
-    * Penalty Box
-    * Player, Done
-      * place (field), Done
-      * Purse
-    * Dice
-    * Gold Coin
-    * QuestionMaker, Done
-      * Question
+  * Player, Done
+    * place (field), Done
+    * purse
+    * penalty Box
+      * gold coin
+  * QuestionMaker, Done
+    * Question
   * GameRunner
+    * dice
 Done: Refactor method GameRunner.main().
 Done: Refactor method Game.wasCorrectlyAnswered().
 Done: Move purse from class Game to class Player.

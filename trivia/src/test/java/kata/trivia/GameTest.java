@@ -158,7 +158,7 @@ public class GameTest {
     }
 
     @Test
-    public void GIVEN_TwoPlayersInPenaltyBox_WHEN_AnswerQuestionWrong_THEN_PlayerUnableToAnswerQuestionAnsweredAQuestionWrong() {
+    public void GIVEN_TwoPlayersInPenaltyBox_WHEN_ProcessQuestionAnswering_THEN_PlayerCannotAnswerQuestion() {
         // Given
         Game game = new Game();
 
@@ -168,19 +168,19 @@ public class GameTest {
 
         // Then
         game.processDiceRollingNumber(4);
-        game.wrongAnswer();
+        game.processQuestionAnswering(7);
         assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
         assertEquals("Failure - ", true, game.isPreviousPlayerOfCurrentPlayerInPenaltyBox());
 
         game.processDiceRollingNumber(4);
-        game.wrongAnswer();
+        game.processQuestionAnswering(7);
         assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
         assertEquals("Failure - ", true, game.isNextPlayerOfCurrentPlayerInPenaltyBox());
 
         game.processDiceRollingNumber(4);
-        game.wrongAnswer();
-        assertEquals("Failure - ", "Pat", game.getNameOfCurrentPlayer());
-        assertEquals("Failure - ", true, game.isPreviousPlayerOfCurrentPlayerInPenaltyBox());
+        game.processQuestionAnswering(7);
+        assertEquals("Failure - ", "Chet", game.getNameOfCurrentPlayer());
+        assertEquals("Failure - ", true, game.isNextPlayerOfCurrentPlayerInPenaltyBox());
 
     }
 }
